@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4bcd514-4c19-47f2-99a8-24e2c59ea62d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/customFieldsEnd1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/customFieldsEnd2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/customFieldsFront.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/formStatisticOverview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/hideQuestionNumbering.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/hideQuestionPositionOverview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/showCategory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-cs_CZ.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-fa_IR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-fi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-hu_HU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-id_ID.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-it_IT.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-ko_KR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-pl_PL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-pt_BR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-sk_SK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-tr_TR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-zh_TW.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_InfoAdaptation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Template.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_ExportXml.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Form.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_ImportXml.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Email.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Form.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_FormMapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_PluginContainer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticFormOverview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticHistory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticUser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticUserMapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Template.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_TemplateMapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_GlobalHelperTabs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_InfoAdaptation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuestionOverallTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuizOverallTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_StatisticsAjax.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_StatisticsNew.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/health-quiz.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-cs_CZ.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-fa_IR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-fi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-hu_HU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-id_ID.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-it_IT.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-ko_KR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-pl_PL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-pt_BR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-sk_SK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-tr_TR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-zh_TW.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-ar.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-ar.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-da_DK.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-da_DK.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-de_DE.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-de_DE.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-el.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-el.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-es_ES.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-es_ES.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-fr_FR.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-nb_NO.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-nb_NO.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-nl_NL.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-nl_NL.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-ru_RU.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-ru_RU.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-sv_SE.mo" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-sv_SE.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Admin.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Ajax.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Ajax.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Category.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Controller.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Front.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Front.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_GlobalSettings.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_GlobalSettings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_ImportExport.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_ImportExport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Preview.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Preview.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Question.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Question.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Quiz.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Quiz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Request.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Statistics.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Statistics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_StyleManager.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_StyleManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Toplist.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_Toplist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_WpqSupport.php" afterPath="$PROJECT_DIR$/lib/controller/WpProQuiz_Controller_WpqSupport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Captcha.php" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Captcha.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_DbUpgrade.php" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_DbUpgrade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Export.php" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Export.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Import.php" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Import.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Until.php" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Until.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Upgrade.php" afterPath="$PROJECT_DIR$/lib/helper/WpProQuiz_Helper_Upgrade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_AnswerTypes.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_AnswerTypes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Category.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_CategoryMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_CategoryMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_GlobalSettings.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_GlobalSettings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_GlobalSettingsMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_GlobalSettingsMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Lock.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Lock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_LockMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_LockMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Mapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Mapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Model.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_PrerequisiteMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_PrerequisiteMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Question.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Question.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_QuestionMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_QuestionMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Quiz.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Quiz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_QuizMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_QuizMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Statistic.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Statistic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticOverview.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticOverview.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticRefMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticRefMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticRefModel.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_StatisticRefModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Toplist.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_Toplist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_ToplistMapper.php" afterPath="$PROJECT_DIR$/lib/model/WpProQuiz_Model_ToplistMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/plugin/WpProQuiz_Plugin_BpAchievementsV2.php" afterPath="$PROJECT_DIR$/lib/plugin/WpProQuiz_Plugin_BpAchievementsV2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/plugin/WpProQuiz_Plugin_BpAchievementsV3.php" afterPath="$PROJECT_DIR$/lib/plugin/WpProQuiz_Plugin_BpAchievementsV3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_AdminToplist.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_AdminToplist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_FrontQuiz.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_FrontQuiz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_FrontToplist.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_FrontToplist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_GobalSettings.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_GobalSettings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_Import.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_Import.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuestionEdit.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuestionEdit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuestionOverall.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuestionOverall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuizEdit.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuizEdit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuizOverall.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_QuizOverall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_Statistics.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_Statistics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_StyleManager.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_StyleManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_View.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_View.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/view/WpProQuiz_View_WpqSupport.php" afterPath="$PROJECT_DIR$/lib/view/WpProQuiz_View_WpqSupport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/js/jquery.ui.touch-punch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uninstall.php" afterPath="$PROJECT_DIR$/uninstall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-ar.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-ar.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-da_DK.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-da_DK.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-de_DE.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-de_DE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-el.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-el.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-es_ES.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-es_ES.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-fr_FR.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-nb_NO.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-nb_NO.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-nl_NL.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-nl_NL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-ru_RU.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-ru_RU.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz-sv_SE.po" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz-sv_SE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-pro-quiz.php" afterPath="$PROJECT_DIR$/wp-pro-quiz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/wp-pro-quiz.pot" afterPath="$PROJECT_DIR$/languages/wp-pro-quiz.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wpProQuiz_admin.js" afterPath="$PROJECT_DIR$/js/wpProQuiz_admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wpProQuiz_admin.min.js" afterPath="$PROJECT_DIR$/js/wpProQuiz_admin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/wpProQuiz_front.css" afterPath="$PROJECT_DIR$/css/wpProQuiz_front.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wpProQuiz_front.js" afterPath="$PROJECT_DIR$/js/wpProQuiz_front.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/wpProQuiz_front.min.css" afterPath="$PROJECT_DIR$/css/wpProQuiz_front.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wpProQuiz_front.min.js" afterPath="$PROJECT_DIR$/js/wpProQuiz_front.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wpProQuiz_toplist.js" afterPath="$PROJECT_DIR$/js/wpProQuiz_toplist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wpProQuiz_toplist.min.js" afterPath="$PROJECT_DIR$/js/wpProQuiz_toplist.min.js" />
+    </list>
+    <ignored path="health-quiz.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="health-quiz" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16172507" vertical-offset="0" max-vertical-offset="1113">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="287" />
+    <option name="y" value="132" />
+    <option name="width" value="2170" />
+    <option name="height" value="1259" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="health-quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="health-quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="health-quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="health-quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="health-quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4bcd514-4c19-47f2-99a8-24e2c59ea62d" name="Default" comment="" />
+      <created>1453694379263</created>
+      <option name="number" value="Default" />
+      <updated>1453694379263</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="287" y="132" width="2170" height="1259" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16172507" vertical-offset="0" max-vertical-offset="1113">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
