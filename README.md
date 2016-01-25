@@ -1,9 +1,11 @@
-#Wp-Pro-Quiz
+#Health-Pro-Quiz
+  
+A powerful and beautiful quiz plugin for WordPress. Focused on health based assessments.
 
-A powerful and beautiful quiz plugin for WordPress.
 
 ##Live Demo
 https://www.huement.com/quiz/quiz-test-page/
+
 
 ##Installation
 
@@ -13,6 +15,6 @@ https://www.huement.com/quiz/quiz-test-page/
 
 
 
+
 ##Forked Source
 https://wordpress.org/plugins/wp-pro-quiz/developers/
-
