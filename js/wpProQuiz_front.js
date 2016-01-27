@@ -16,6 +16,7 @@
     // call this when the document is ready
     // this function protects itself against being called more than once
     function ready() {
+        console.log("t123");
         if (!readyFired) {
             // this must be set to true before we start calling callbacks
             readyFired = true;
@@ -750,43 +751,6 @@ wpProQuizReady(function () {
 
                 });
 
-//				$('.wpProQuiz_forms input, .wpProQuiz_forms textarea').each(function() {
-//					var $this = $(this);
-//					var isRequired = $this.data('required') == 1;
-//					var validate = $this.data('validate') & 0xFF;
-//					var test = false;
-//					var $infos = $this.parents('div:eq(0)').find('.wpProQuiz_invalidate');
-//					
-//					if(isRequired) {
-//						if($this.attr('type') == 'checkbox') {
-//							if($this.is(':checked'))
-//								test = true;
-//								
-//						} else {
-//							if(!funcs.isEmpty($this.val()))
-//								test = true;
-//						}
-//						
-//						if(!test) {
-//							check = false;
-//							$infos.eq(0).show();
-//						} else {
-//							$infos.eq(0).hide();
-//						}
-//					}
-//					
-//					if(!funcs.testValidate($this.val(), validate)) {
-//						check = false;
-//						$infos.eq(1).show();
-//					} else {
-//						$infos.eq(1).hide();
-//					}
-//					
-//				});
-
-//				if(!check)
-//					alert(WpProQuizGlobal.fieldsNotFilled);
-//				
                 return check;
             };
 
@@ -1210,27 +1174,17 @@ wpProQuizReady(function () {
             },
 
             nextQuestion: function () {
-//				currentQuestion = currentQuestion.hide().next().show();
-//				
-//				plugin.methode.scrollTo(globalElements.quiz);
-//				
-//				$e.trigger({type: 'changeQuestion', values: {item: currentQuestion, index: currentQuestion.index()}});
-//				
-//				if(!currentQuestion.length) {
-//					plugin.methode.showQuizSummary();			
-//				}
-
+                $(".wpProQuiz_question_page").data("back_mode",false);
                 this.showQuestionObject(currentQuestion.next());
             },
 
             prevQuestion: function () {
-//				currentQuestion = currentQuestion.hide().prev().show();
-//				
-//				plugin.methode.scrollTo(globalElements.quiz);
-//				
-//				$e.trigger({type: 'changeQuestion', values: {item: currentQuestion, index: currentQuestion.index()}});
-//				
+                $(".wpProQuiz_question_page").data("back_mode",true);
                 this.showQuestionObject(currentQuestion.prev());
+                console.log(currentQuestion.index());
+                if(currentQuestion.index() == 1){
+                    $(".wpProQuiz_question_page").addClass("remove_after_one");
+                }
             },
 
             showQuestion: function (index) {
@@ -1239,35 +1193,39 @@ wpProQuizReady(function () {
                 if (config.mode == 3 || inViewQuestions) {
                     if (config.qpp) {
                         plugin.methode.showSingleQuestion(index + 1);
-//						questionTimer.startQuiz();
-//						return;
                     }
-//					plugin.methode.scrollTo($e.find('.wpProQuiz_list > li').eq(index), 1);
                     plugin.methode.scrollTo($element, 1);
                     questionTimer.startQuiz();
                     return;
                 }
 
-//				currentQuestion.hide();
-//				
-//				currentQuestion = $element.show();
-//				
-//				plugin.methode.scrollTo(globalElements.quiz);
-//				
-//				$e.trigger({type: 'changeQuestion', values: {item: currentQuestion, index: currentQuestion.index()}});
-//				
-//				if(!currentQuestion.length)
-//					plugin.methode.showQuizSummary();
-
                 this.showQuestionObject($element);
             },
 
             showQuestionObject: function (obj) {
+
+                var allcats = ['selection'];
+                var questionCat = currentQuestion.find(globalNames.questionList).data('question_cat');
+
+                $(".wpProQuiz_questionList[data-question_id=1] .wpProQuiz_questionInput").each(function(){
+                   console.log($(this));
+                   if($(this).is(":checked") == true){
+                       allcats.push($(this).data("live-category"));
+                   }
+                });
+
+
                 if (!obj.length && bitOptions.forcingQuestionSolve && bitOptions.quizSummeryHide && bitOptions.reviewQustion) {
-                    for (var i = 0, c = $e.find('.wpProQuiz_listItem').length; i < c; i++) {
-                        if (!quizSolved[i]) {
-                            alert(WpProQuizGlobal.questionsNotSolved);
-                            return false;
+                    if($.inArray(questionCat, allcats) !== -1){
+                        if($("#mainQUizList").hasClass("skipOver")!=true){
+                            console.log("Valid Question. Must Answer");
+                            for (var i = 0, c = $e.find('.wpProQuiz_listItem').length; i < c; i++) {
+                                if (!quizSolved[i]) {
+                                    console.log("t2");
+                                    notie.alert(3,WpProQuizGlobal.questionNotSolved,5);
+                                    return false;
+                                }
+                            }
                         }
                     }
                 }
@@ -1290,7 +1248,22 @@ wpProQuizReady(function () {
                     plugin.methode.showQuizSummary();
                 } else {
                     var questionId = currentQuestion.find(globalNames.questionList).data('question_id');
-                    questionTimer.questionStart(questionId);
+                    var questionCat = currentQuestion.find(globalNames.questionList).data('question_cat');
+                    console.log(questionCat);
+                    console.log(allcats);
+                    if($.inArray(questionCat, allcats) !== -1){
+                        console.log("Valid Category");
+                        questionTimer.questionStart(questionId);
+                        $("#mainQUizList").removeClass("skipOver");
+                    } else {
+                        console.log("Invalid Category");
+                        $("#mainQUizList").addClass("skipOver");
+                        if($(".wpProQuiz_question_page").data("back_mode")==true){
+                            plugin.methode.prevQuestion();
+                        } else {
+                            plugin.methode.skipQuestion();
+                        }
+                    }
                 }
             },
 
@@ -1966,10 +1939,13 @@ wpProQuizReady(function () {
                 plugin.methode.registerSolved();
 
                 globalElements.next.click(function () {
+
+                    $(".wpProQuiz_question_page").removeClass("remove_after_one");
+
                     if (bitOptions.forcingQuestionSolve && !quizSolved[currentQuestion.index()]
                         && (bitOptions.quizSummeryHide || !bitOptions.reviewQustion)) {
-
-                        alert(WpProQuizGlobal.questionNotSolved);
+                        console.log("t4");
+                        notie.alert(3,WpProQuizGlobal.questionNotSolved,5);
                         return false;
                     }
 
@@ -1983,8 +1959,8 @@ wpProQuizReady(function () {
                 $e.find(globalNames.check).click(function () {
                     if (bitOptions.forcingQuestionSolve && !quizSolved[currentQuestion.index()]
                         && (bitOptions.quizSummeryHide || !bitOptions.reviewQustion)) {
-
-                        alert(WpProQuizGlobal.questionNotSolved);
+                        console.log("t5");
+                        notie.alert(3,WpProQuizGlobal.questionNotSolved,5);
                         return false;
                     }
 
@@ -1995,7 +1971,8 @@ wpProQuizReady(function () {
                     if (bitOptions.forcingQuestionSolve && (bitOptions.quizSummeryHide || !bitOptions.reviewQustion)) {
                         for (var i = 0, c = $e.find('.wpProQuiz_listItem').length; i < c; i++) {
                             if (!quizSolved[i]) {
-                                alert(WpProQuizGlobal.questionsNotSolved);
+                                console.log("t3");
+                                notie.alert(3,WpProQuizGlobal.questionNotSolved,5);
                                 return false;
                             }
                         }
@@ -2017,129 +1994,6 @@ wpProQuizReady(function () {
             }
         };
 
-//		/**
-//		 * @memberOf plugin
-//		 */
-//		plugin.init = function() {
-//			//
-//			plugin.methode.setClozeStyle();
-//			//
-//			plugin.methode.registerSolved();
-//			
-//			
-//			reviewBox.init();
-//			
-//			if(bitOptions.checkBeforeStart && !bitOptions.preview) {
-//				plugin.methode.checkQuizLock();
-//			}
-//			
-//			$e.find('input[name="startQuiz"]').click(function() {
-//				plugin.methode.startQuiz();
-//				return false;
-//			});
-//			
-//			//
-//			globalElements.next.click(function() {
-//				if(bitOptions.forcingQuestionSolve && !quizSolved[currentQuestion.index()]
-//						&& (bitOptions.quizSummeryHide || !bitOptions.reviewQustion)) {
-//					
-//					alert(WpProQuizGlobal.questionNotSolved);
-//					return false;
-//				}
-//				
-//				plugin.methode.nextQuestion();
-//			});
-//			
-//			//
-//			globalElements.back.click(function() {
-//				plugin.methode.prevQuestion();
-//			});
-//			
-//			$e.find('input[name="reShowQuestion"]').click(function() {
-//				plugin.methode.showQustionList();
-//			});
-//			
-//			$e.find('input[name="restartQuiz"]').click(function() {
-//				plugin.methode.restartQuiz();
-//			});
-//			
-//			//
-//			$e.find(globalNames.check).click(function() {
-//				if(bitOptions.forcingQuestionSolve && !quizSolved[currentQuestion.index()] 
-//						&& (bitOptions.quizSummeryHide || !bitOptions.reviewQustion)) {
-//					
-//					alert(WpProQuizGlobal.questionNotSolved);
-//					return false;
-//				}
-//				
-//				plugin.methode.checkQuestion();
-//			});
-//			
-//			//
-//			$e.find('input[name="checkSingle"]').click(function() {
-//				if(bitOptions.forcingQuestionSolve	&& (bitOptions.quizSummeryHide || !bitOptions.reviewQustion)) {
-//					for(var i = 0, c = $e.find('.wpProQuiz_listItem').length; i < c; i++) {
-//						if(!quizSolved[i]) {
-//							alert(WpProQuizGlobal.questionsNotSolved);
-//							return false;
-//						}
-//					}
-//				}
-//				
-//				plugin.methode.showQuizSummary();
-//			});
-//			
-//			//
-//			$e.find('input[name="tip"]').click(plugin.methode.showTip);
-//
-//			//
-//			$e.find('input[name="skip"]').click(plugin.methode.skipQuestion);
-//			
-//			$e.find('input[name="review"]').click(plugin.methode.reviewQuestion);
-//			
-//			$e.find('input[name="wpProQuiz_toplistAdd"]').click(plugin.methode.addToplist);
-//			
-//			$e.find('input[name="quizSummary"]').click(plugin.methode.showQuizSummary);
-//			
-//			$e.find('input[name="endQuizSummary"]').click(function() {
-//				if(bitOptions.forcingQuestionSolve) {
-//					for(var i = 0, c = $e.find('.wpProQuiz_listItem').length; i < c; i++) {
-//						if(!quizSolved[i]) {
-//							alert(WpProQuizGlobal.questionsNotSolved);
-//							return false;
-//						}
-//					}
-//				}
-//				
-//				if(bitOptions.formActivated && config.formPos == formPosConst.END && !formClass.checkForm())
-//					return;
-//				
-//				plugin.methode.finishQuiz();
-//			});
-//			
-//			$e.find('input[name="endInfopage"]').click(function() {
-//				if(formClass.checkForm())
-//					plugin.methode.finishQuiz();
-//			});
-//			
-//			$e.find('input[name="showToplist"]').click(function() {
-//				globalElements.quiz.hide();
-//				globalElements.toplistShowInButton.toggle();
-//			});
-//			
-//			//
-//			$e.find('input[name="wpProQuiz_pageLeft"]').click(function() {
-//				plugin.methode.showSinglePage(currentPage-1);
-//			});
-//			
-//			//
-//			$e.find('input[name="wpProQuiz_pageRight"]').click(function() {
-//				plugin.methode.showSinglePage(currentPage+1);
-//			});
-//			
-//			$e.bind('questionSolved', plugin.methode.questionSolved);
-//		};
-
         /**
          * @memberOf plugin
          */
@@ -2158,6 +2012,19 @@ wpProQuizReady(function () {
 
             $e.find('input[name="reShowQuestion"]').click(function () {
                 plugin.methode.showQustionList();
+
+                var allcats = ['selection'];
+                var questionCat = currentQuestion.find(globalNames.questionList).data('question_cat');
+
+                $(".wpProQuiz_questionList[data-question_id=1] .wpProQuiz_questionInput").each(function(){
+                    console.log($(this));
+                    if($(this).is(":checked") == true){
+                        allcats.push($(this).data("live-category"));
+                    }
+                });
+                if($.inArray(questionCat, allcats) !== -1) {
+
+                }
             });
 
             $e.find('input[name="restartQuiz"]').click(function () {
@@ -2174,7 +2041,8 @@ wpProQuizReady(function () {
                 if (bitOptions.forcingQuestionSolve) {
                     for (var i = 0, c = $e.find('.wpProQuiz_listItem').length; i < c; i++) {
                         if (!quizSolved[i]) {
-                            alert(WpProQuizGlobal.questionsNotSolved);
+                            console.log("t1");
+                            notie.alert(3,WpProQuizGlobal.questionNotSolved,5);
                             return false;
                         }
                     }

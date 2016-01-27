@@ -1,3 +1,7 @@
+.wpProQuiz_question_text a {
+    color:#228DF1!important;
+}
+
 .wpProQuiz_answerCorrect {
     background: #6DB46D !important;
     font-weight: bold !important;
@@ -608,4 +612,8 @@ span.wpProQuiz_catPercent {
 
 .wpProQuiz_quiz input[type="radio"] {
     -webkit-appearance: radio;
+}
+
+.remove_after_one {
+    display:none;
 }

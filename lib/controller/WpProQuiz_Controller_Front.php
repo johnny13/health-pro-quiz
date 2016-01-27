@@ -39,6 +39,15 @@ class WpProQuiz_Controller_Front
     private function loadJsScripts($footer = true, $quiz = true, $toplist = false)
     {
         if ($quiz) {
+
+            wp_enqueue_script(
+                'notie',
+                plugins_url('js/notie.js', WPPROQUIZ_FILE),
+                array('jquery'),
+                '2.1.0',
+                $footer
+            );
+
             wp_enqueue_script(
                 'wpProQuiz_front_javascript',
                 plugins_url('js/wpProQuiz_front' . (WPPROQUIZ_DEV ? '' : '.min') . '.js', WPPROQUIZ_FILE),

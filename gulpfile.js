@@ -28,7 +28,7 @@ gulp.task('js-task', function() {
     return gulp
         .src(paths.js)
         .pipe(ext('min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('js'));
 });
 

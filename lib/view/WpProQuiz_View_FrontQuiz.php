@@ -742,17 +742,19 @@ RESULT CATEGORY IS
             <div class="wpProQuiz_catOverview" <?php $this->isDisplayNone($this->quiz->isShowCategoryScore()); ?>>
                 <h4><?php _e('Categories', 'wp-pro-quiz'); ?></h4>
 
-                <div style="margin-top: 10px;">
+                <div style="margin-top: 10px;" id="categories_list">
                     <ol>
                         <?php foreach ($this->category as $cat) {
                             if (!$cat->getCategoryId()) {
                                 $cat->setCategoryName(__('Not categorized', 'wp-pro-quiz'));
                             }
                             ?>
-                            <li data-category_id="<?php echo $cat->getCategoryId(); ?>">
+                            <?php if ($cat->getCategoryName() != "selection"): ?>
+                            <li data-category_id="<?php echo $cat->getCategoryId(); ?>" data-category_name="<?php echo $cat->getCategoryName(); ?>">
                                 <span class="wpProQuiz_catName"><?php echo $cat->getCategoryName(); ?></span>
                                 <span class="wpProQuiz_catPercent">0%</span>
                             </li>
+                            <?php endif; ?>
                         <?php } ?>
                     </ol>
                 </div>
@@ -811,11 +813,34 @@ RESULT CATEGORY IS
         $catPoints = array();
         ?>
         <div style="display: none;" class="wpProQuiz_quiz">
-            <ol class="wpProQuiz_list">
+        <?php //var_dump($this->question[0]->getAnswerType()); ?>
+
+            <ol class="wpProQuiz_list" id="mainQUizList">
                 <?php
                 $index = 0;
+                $multipleMode = false;
+
+                //var_dump($this->question);
+
+                if($this->question[0]->getAnswerType() == "multiple")
+                {
+                    //We are in multiple selection mode
+                    $multipleMode = true;
+                    //Ignore the first question
+                    $questionCount--;
+                    //$index = -1;
+                }
+
                 foreach ($this->question as $question) {
                     $index++;
+
+                    if($multipleMode == true)
+                    {
+                        //We are in selection mode
+
+                        //Ignore the first question
+
+                    }
 
                     /* @var $answerArray WpProQuiz_Model_AnswerTypes[] */
                     $answerArray = $question->getAnswerData();
@@ -848,15 +873,25 @@ RESULT CATEGORY IS
 
                     ?>
                     <li class="wpProQuiz_listItem" style="display: none;">
-                        <div
-                            class="wpProQuiz_question_page" <?php $this->isDisplayNone($this->quiz->getQuizModus() != WpProQuiz_Model_Quiz::QUIZ_MODUS_SINGLE && !$this->quiz->isHideQuestionPositionOverview()); ?> >
-                            <?php printf(__('Question %s of %s', 'wp-pro-quiz'), '<span>' . $index . '</span>',
-                                '<span>' . $questionCount . '</span>'); ?>
+
+                        <div class="wpProQuiz_question_page<?php if($multipleMode == true && $index == 1){ echo " remove_after_one"; } ?>" <?php $this->isDisplayNone($this->quiz->getQuizModus() != WpProQuiz_Model_Quiz::QUIZ_MODUS_SINGLE && !$this->quiz->isHideQuestionPositionOverview()); ?> >
+
+                            <?php if($multipleMode == true): ?>
+                                <div style="display:none;"><span style="display:none;">X</span><span style="display:none;">X</span></div>
+                                <div id="dynamic_question_number">Question <span id="dqnCurrent">0</span> of <span id="dqnTotal">0</span></div>
+                            <?php else: ?>
+                                <?php printf(__('Question %s of %s', 'wp-pro-quiz'), '<span>' . $index . '</span>',
+                                    '<span>' . $questionCount . '</span>'); ?>
+                            <?php endif; ?>
+
                         </div>
+
+                        <?php if($multipleMode == true && $index > 1): ?>
                         <h5 style="<?php echo $this->quiz->isHideQuestionNumbering() ? 'display: none;' : 'display: inline-block;' ?>"
                             class="wpProQuiz_header">
                             <span><?php echo $index; ?></span>. <?php echo $question->getTitle(); ?>
                         </h5>
+                        <?php endif; ?>
 
                         <?php if ($this->quiz->isShowPoints()) { ?>
                             <span style="font-weight: bold; float: right;"><?php printf(__('%d points', 'wp-pro-quiz'),
@@ -864,12 +899,14 @@ RESULT CATEGORY IS
                             <div style="clear: both;"></div>
                         <?php } ?>
 
+                        <?php if($multipleMode == true && $index > 1): ?>
                         <?php if ($question->getCategoryId() && $this->quiz->isShowCategory()) { ?>
-                            <div style="font-weight: bold; padding-top: 5px;">
+                            <div style="font-weight: lighter; padding-top: 5px;color: #228DF1;">
                                 <?php printf(__('Category: %s', 'wp-pro-quiz'),
                                     esc_html($question->getCategoryName())); ?>
                             </div>
                         <?php } ?>
+                        <?php endif; ?>
                         <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
                             <div class="wpProQuiz_question_text">
                                 <?php echo do_shortcode(apply_filters('comment_text', $question->getQuestion())); ?>
@@ -908,6 +945,7 @@ RESULT CATEGORY IS
                                 </div>
                             <?php } ?>
                             <ul class="wpProQuiz_questionList" data-question_id="<?php echo $question->getId(); ?>"
+                                data-question_cat="<?php echo $question->getCategoryName(); ?>"
                                 data-type="<?php echo $question->getAnswerType(); ?>">
                                 <?php
                                 $answer_index = 0;
@@ -937,7 +975,15 @@ RESULT CATEGORY IS
                                                 <input class="wpProQuiz_questionInput"
                                                        type="<?php echo $question->getAnswerType() === 'single' ? 'radio' : 'checkbox'; ?>"
                                                        name="question_<?php echo $this->quiz->getId(); ?>_<?php echo $question->getId(); ?>"
-                                                       value="<?php echo($answer_index + 1); ?>"> <?php echo $answer_text; ?>
+                                                       value="<?php echo($answer_index + 1); ?>"
+                                                       <?php if($multipleMode == true && $index == 1): ?>data-live-category="<?php if(strpos($answer_text, "::") !== false){ $catparts = explode("::",$answer_text); echo $catparts[1]; } else { echo $answer_text; } ?>"<?php endif; ?>
+                                                       > <?php
+                                                        if(isset($catparts)){
+                                                            echo $catparts[0];
+                                                        } else {
+                                                            echo $answer_text;
+                                                        }
+                                                        ?>
                                             </label>
 
                                         <?php } else {
